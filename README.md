@@ -21,7 +21,7 @@ Install the node dependencies with `npm i` (you may actually need to use pnpm) (
 ### To do:
 
 - [ ] Clean CSS (postcss, purgecss, ...)
-- [ ] Make a peer to peer branch
+- [x] Make a peer to peer branch
 
 ---
 
