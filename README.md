@@ -14,7 +14,7 @@ Features:
 
 ### Instructions
 
-Install the node dependencies with `npm i` in both `chat_app/` and `chat_app/client`. Then `npm run build` to build the front end. Start the web server with `node server.js` You'll need to change the hostnames (run `ag -l jack.town` to find the files to change). Start the database with `mongod --dbpath ./msgsdb --port 27017`. Finally, set up a reverse proxy from port 80/443 to 9000 and you're good to go!
+Install the node dependencies with `npm i` in both `chat_app/` and `chat_app/client`. Then `npm run build` in `chat_app/client` to build the front end. Start the web server with `node server.js` in `chat_app/`. You'll need to change `chat.jack.town` in `server.js` to `localhost` or your own domain. Start the database with `mongod --dbpath ./msgsdb --port 27017`. Finally, set up a reverse proxy from port 80/443 to 9000 and you're good to go!
 
 ---
 
