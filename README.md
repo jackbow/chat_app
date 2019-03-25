@@ -1,6 +1,8 @@
 ## P2P Progress
 Grafted old peer to peer code into new good code. Currently `Cannot read property 'on' of undefined` in the estConn function. Old code worked, so this is should just be a merging issue.
 
+Look into easyRTC and RTC.io if need be.
+
 ## Chat Web App
 
 Check it out [here!](chat.jack.town) Built in a couple days on the MERN stack (Mongo, Express, React, Node). First time doing backend web development. This used to be peer to peer but I had to change it per the project spec… RIP decentralization.
