@@ -1,0 +1,155 @@
+@tailwind preflight;
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ */ 
+ 
+@tailwind utilities;
+
+@tailwind screens;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ */
+
+.chat-container {
+   display: grid;
+   grid-template-columns: 33% auto 33%;
+   grid-template-rows: 10% auto 10%;
+   grid-template-areas: ". . ." ". chat ." ". . .";
+ }
+
+.chat-window {
+   display: grid;
+   grid-template-columns: 100% auto;
+   grid-template-rows: auto 60px;
+   grid-template-areas: "chat-msgs chat-msgs" "chat-input chat-input";
+   border-radius: 10px 10px 10px 10px;
+}
+@media screen and (max-width: 979px) /* Mobile */ {
+   .chat-window-area {
+      grid-area: 1 / 1 / 4 / 4;
+   }
+}
+
+@media screen and (min-width: 980px) /* Desktop */ {
+   .chat-window-area {
+      grid-area: chat;
+   }
+}
+
+.blur {
+   filter: blur(3px);
+}
+
+.bg-gradient {
+   background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.pos-abs {
+   position: absolute;
+}
+
+.name-div {
+   grid-area: 1 / 1 / 4 / 4;
+   height: 100%;
+   display: grid;
+}
+
+.header {
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: auto;
+   font-size: 120px;
+   color: #606f7b;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   .header {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+   }
+}
+
+.name-input {
+   margin-left: auto;
+   margin-top: 10px;
+   margin-bottom: 15%;
+   width: auto;
+   height: 55px;
+   text-align: center;
+}
+
+.name-btn {
+   height: 55px;
+   margin-right: auto;
+   margin-top: 10px;
+   margin-bottom: auto;
+}
+
+.gridarea-chat-input {
+   grid-area: chat-input;
+}
+
+.display-flex {
+   display: flex;
+}
+
+.center-text {
+   text-align: center;
+}
+
+.gridarea-chat-msgs {
+   grid-area: chat-msgs;
+}
+
+.round-top {
+   border-radius: 10px 10px 0px 0px;
+}
+
+.round-lower-left {
+   border-radius: 0px 0px 0px 10px;
+}
+
+.round-lower-right {
+   border-radius: 0px 0px 10px 0px;
+}
+
+.round-left {
+   border-radius: 10px 0px 0px 10px;
+}
+
+.round-right {
+   border-radius: 0px 10px 10px 0px;
+}
+
+.send-btn:active {
+   border: none;
+}
+
+.block-under {
+   pointer-events: none;
+}
