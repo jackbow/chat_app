@@ -27,10 +27,10 @@ Install the node dependencies with `npm i` in both `chat_app/` and `chat_app/cli
 
 ### Shoutouts:
 
-[create-react-app](<https://facebook.github.io/create-react-app/>)
-[webgradients](https://webgradients.com)
-[pnpm](https://pnpm.js.org/)
-[tailwindcss](http://tailwindcss.com)
+[create-react-app](<https://facebook.github.io/create-react-app/>), 
+[webgradients](https://webgradients.com), 
+[pnpm](https://pnpm.js.org/), 
+[tailwindcss](http://tailwindcss.com), 
 
 The top 10 google results for the following queries:
 - MERN stack tutorial
