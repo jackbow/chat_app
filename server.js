@@ -17,11 +17,6 @@ app.get('/public', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/public/index.html'));
 })
 
-// Setup socket.io
-// =======
-let io = require('socket.io').listen(server);
-io.set('origins', 'https://chat.jack.town:*')
-
 // Setup mongoose
 // =======
 mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }, function (error) {
@@ -34,8 +29,10 @@ mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }, fu
     }
 });
 
-// Set socket.io interactions
+// Setup socket.io
 // =======
+let io = require('socket.io').listen(server);
+io.set('origins', 'https://chat.jack.town:*')
 io.on('connection', function (socket) {
     //console.log('user connected')
     socket.on('fetch', idx => {
@@ -52,9 +49,8 @@ io.on('connection', function (socket) {
         })
     })
     socket.on('msg', msg => {
-        // console.log(msg.member.name + ': ' + msg.text) // debug
         MsgDB.create(msg)
         socket.broadcast.emit('msg', msg)
     });
-    //socket.on('disconnect', console.log('user disconnected')
+    //socket.on('disconnect', () => {console.log('user disconnected')})
 });
