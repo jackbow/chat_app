@@ -1545,10 +1545,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-d09ehQWqLMywP/PT/5JvXwPskPK9QCXUjiSkAHehreB381qExXf5JFCBWhfEyNonRbkIneCeYM99w+Ud48YIQQ==
-  /@types/node/10.14.2:
+  /@types/node/10.14.3:
     dev: false
     resolution:
-      integrity: sha512-Y1kCfTShKcJH4CsG5+m5RMA+0tQKa8TrxyMczy0zE8QeDKbuOAJMF8JRM5ouCFyakaSoAhhgy2beCSKLVz+daw==
+      integrity: sha512-2lhc7S28vo8FwR3Jv3Ifyd77AxEsx+Nl9ajWiac6/eWuvZ84zPK4RE05pfqcn3acIzlZDpQj5F1rIKQZX3ptLQ==
   /@types/node/11.11.5:
     dev: false
     resolution:
@@ -7741,13 +7741,13 @@ packages:
       integrity: sha512-U/il5MsrZp7mGg3mSQfn742na2T+1/vHDCG5/iTI3X9MKUuYUZVLQhyRsg06mCgDBTd57TxzgZt7P+fYfjRLtA==
   /peerjs/0.3.24:
     dependencies:
-      '@types/node': 10.14.2
+      '@types/node': 10.14.3
       eventemitter3: 0.1.6
       express: 4.16.4
       js-binarypack: 0.0.9
       opencollective: 1.0.3
       opencollective-postinstall: 2.0.2
-      react: 16.8.4
+      react: 16.8.5
       reliable: github.com/michelle/reliable/70604f577ae55a2eb015c17d73cc8d9dce5f9ec4
       webrtc-adapter: 6.4.8
     dev: false
@@ -8662,7 +8662,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-      react-is: 16.8.4
+      react-is: 16.8.5
     dev: false
     resolution:
       integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8873,10 +8873,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-fp+U98OMZcnduQ+NSEiQa4s/XMsbp+5KlydmkbESOw4P69iWZ68ZMFM5a2BuE0FgqPBKApJyRuYHR95jM8lAmg==
-  /react-is/16.8.4:
+  /react-is/16.8.5:
     dev: false
     resolution:
-      integrity: sha512-PVadd+WaUDOAciICm/J1waJaSvgq+4rHE/K70j0PFqKhkTBsPv/82UGQJNXAngz1fOQLLxI6z1sEDmJDQhCTAA==
+      integrity: sha512-sudt2uq5P/2TznPV4Wtdi+Lnq3yaYW8LfvPKLM9BKD8jJNBkxMVyB0C9/GmVhLw7Jbdmndk/73n7XQGeN9A3QQ==
   /react-scripts/2.1.5:
     dependencies:
       '@babel/core': 7.2.2
@@ -8945,6 +8945,17 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-0GQ6gFXfUH7aZcjGVymlPOASTuSjlQL4ZtVC5YKH+3JL6bBLCVO21DknzmaPlI90LN253ojj02nsapy+j7wIjg==
+  /react/16.8.5:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      scheduler: 0.13.5
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-daCb9TD6FZGvJ3sg8da1tRAtIuw29PbKZW++NN4wqkbEvxL+bZpaaYb4xuftW/SpXmgacf1skXl/ddX6CdOlDw==
   /read-file-stdin/0.2.1:
     dependencies:
       gather-stream: 1.0.0
@@ -9433,6 +9444,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-cvSOlRPxOHs5dAhP9yiS/6IDmVAVxmk33f0CtTJRkmUWcb1Us+t7b1wqdzoC0REw2muC9V5f1L/w5R5uKGaepA==
+  /scheduler/0.13.5:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+    resolution:
+      integrity: sha512-K98vjkQX9OIt/riLhp6F+XtDPtMQhqNcf045vsh+pcuvHq+PHy1xCrH3pq1P40m6yR46lpVvVhKdEOtnimuUJw==
   /schema-utils/0.4.7:
     dependencies:
       ajv: 6.10.0
@@ -11195,6 +11213,7 @@ packages:
     dev: false
     name: reliable
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/michelle/reliable/tar.gz/70604f577ae55a2eb015c17d73cc8d9dce5f9ec4'
     version: 0.1.0
   github.com/tomcartwrightuk/socket.io-p2p-parser/1091624359c870e451b1a3a7b2108969380173cd:

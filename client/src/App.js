@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
+import Peer from 'peerjs';
 import Input from './Input.js';
 import Messages from './Messages.js';
 import Overlay from './Overlay.js';
 import './App.css';
-
-const socket = io('http://localhost:9000')
-// const socket = io('http://chat.jack.town:9000')
 
 const randId = () => {
   let r = ''
@@ -16,6 +14,17 @@ const randId = () => {
   return (r)
 }
 const id_ = randId()
+
+const socket = io()
+let peerSet = new Set()
+const p2p = new Peer(id_, {
+  host: 'http://localhost',
+  // host: 'https://chat.jack.town',
+  port: 9000,
+  // port: 443,
+  path: '/peer',
+  secure: false
+})
 
 class App extends Component {
   state = {
@@ -30,31 +39,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     socket.connect();
-    socket.on('id', id => {
-      this.setState({
-        member: {
-          ...this.state.member,
-          userID: id,
-        }
-      })
+    p2p.on('connection', conn => {
+      this.estConn(conn)
+      console.log('peer connected')
+    });
+    socket.emit('peerID', p2p.id)
+    socket.on('peerID', peerID => {
+      this.estConn(p2p.connect(peerID))
+      console.log('connected to peer')
     })
-    socket.on('msg', msg => {
-      this.setState({
-        messages: [
+  }
+  estConn = (conn) => {
+    conn.on('open', () => {
+      conn.on('data', msg => {
+        this.setState({
           ...this.state.messages,
           msg,
-        ]
-      })
-    })
-    socket.on('msgs', msgs => {
-      this.setState({
-        messages: [
-          ...msgs,
-          ...this.state.messages,
-        ]
-      })
-    })
-    socket.emit('fetch', -1)
+        });
+      });
+    });
+    conn.on('close', () => {
+      peerSet.delete(conn)
+    });
+    peerSet.add(conn);
   }
   sendMessage = (text) => {
     const msg = {
@@ -70,7 +77,9 @@ class App extends Component {
         msg,
       ]
     })
-    socket.emit('msg', msg)
+    for (const conn of peerSet) {
+      conn.send(msg)
+    }
   }
   setName = (name) => {
     this.setState({
@@ -80,15 +89,6 @@ class App extends Component {
         name: name,
       }
     })
-  }
-  fetchMsgs = () => {
-    const time = (new Date()).getTime()
-    if (this.state.last_fetch < (time - 1500) && this.state.messages[0].idx !== 0) {
-      socket.emit('fetch', this.state.messages[0].idx)
-      this.setState({
-        last_fetch: time,
-      })
-    }
   }
   render() {
     return (
@@ -101,7 +101,6 @@ class App extends Component {
               className="bg-white px-8 gridarea-chat-msgs round-top py-8 h-full shadow-lg mx-auto object-center flex-col"
               messages={this.state.messages}
               currentMember={this.state.member}
-              fetchMsgs={this.fetchMsgs}
             />
             <Input submit={this.sendMessage} inputText="Message" buttonText="Send" focus={this.state.member.name.length > 0}
               buttonStyle="round-lower-right" inputStyle="round-lower-left" formStyle="gridarea-chat-input" />
