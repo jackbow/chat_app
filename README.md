@@ -8,7 +8,7 @@ Features:
 - Hover on a message to see time/date sent
 - Responsive
 - Pretty
-- Messy CSS... (some in .css, some in .js) (I need to up my css tooling/practices)
+- Messy CSS... (some in .css, some in .js)
 
 ---
 
@@ -25,7 +25,7 @@ Install the node dependencies with `npm i` (you may actually need to use pnpm) (
 
 ---
 
-### Shoutouts:
+### Thanks:
 
 [create-react-app](<https://facebook.github.io/create-react-app/>), 
 [webgradients](https://webgradients.com), 
@@ -37,6 +37,6 @@ The top 10 google results for the following queries:
 - React chat app
 - Mongoose tutorial
 - Express tutorial
-- how to <thing> stack overflow
+- how to \<xyz\> stack overflow
 
 etc.
