@@ -1,6 +1,6 @@
 ## Chat Web App
 
-Check it out [here!](chat.jack.town) Built in a couple days on the MERN stack (Mongo, Express, React, Node). First time doing backend web development. This used to be peer to peer but I had to change it per the project spec… RIP decentralization.
+Check it out [here!](https://chat.jack.town) Built in a couple days on the MERN stack (Mongo, Express, React, Node). First time doing backend web development. This used to be peer to peer but I had to change it per the project spec… RIP decentralization.
 
 Features:
 - Scroll to fetch old messages
