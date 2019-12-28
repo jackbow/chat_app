@@ -30,13 +30,5 @@ Install the node dependencies with `npm i` (you may actually need to use pnpm) (
 [create-react-app](<https://facebook.github.io/create-react-app/>), 
 [webgradients](https://webgradients.com), 
 [pnpm](https://pnpm.js.org/), 
-[tailwindcss](http://tailwindcss.com), 
-
-The top 10 google results for the following queries:
-- MERN stack tutorial
-- React chat app
-- Mongoose tutorial
-- Express tutorial
-- how to \<xyz\> stack overflow
-
-etc.
+[tailwindcss](http://tailwindcss.com),
+stack overflow
