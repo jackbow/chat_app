@@ -92,10 +92,9 @@ class App extends Component {
   }
   render() {
     return (
-      // <div>
         <div className={"bg-gradient h-screen chat-container"}>
           <Overlay setName={this.setName} />
-        <div className={ "shadow-lg bg-white chat-window chat-window-area object-center flex-col overflow-auto " + 
+          <div className={ "shadow-lg bg-white chat-window chat-window-area object-center flex-col overflow-auto " + 
                           this.state.overlay_classes }>
             <Messages
               className="bg-white px-8 gridarea-chat-msgs round-top py-8 h-full shadow-lg mx-auto object-center flex-col"
