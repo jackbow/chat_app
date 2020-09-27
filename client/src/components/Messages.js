@@ -1,7 +1,6 @@
-import {Component} from "react";
-import React from "react";
-import { getUserIdx, gradientNames, colors } from './gradients.js';
-import './Messages.css';
+import React, { Component } from "react";
+import { getUserIdx, gradientNames, colors } from '../utilities/gradients.js';
+import '../styles/Messages.css';
 
 class Messages extends Component {
     scrollToBottom = () => {

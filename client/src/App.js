@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
-import Input from './Input.js';
-import Messages from './Messages.js';
-import Overlay from './Overlay.js';
-import './App.css';
+import Input from './components/Input.js';
+import Messages from './components/Messages.js';
+import Overlay from './components/Overlay.js';
+import './styles/App.css';
 
-const socket = io('http://localhost:9000')
-// const socket = io('http://chat.jack.town:9000')
+const socket = io('https://35.233.187.4:9000')
 
 const randId = () => {
   let r = ''

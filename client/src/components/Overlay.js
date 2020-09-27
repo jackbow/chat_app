@@ -1,7 +1,7 @@
 import {Component} from "react";
 import React from "react";
 import Input from './Input.js';
-import './gradients.css';
+import '../styles/gradients.css';
 
 class Overlay extends Component {
     state = {
