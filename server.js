@@ -19,7 +19,7 @@ app.get('/public', (req, res) => {
 
 // Setup mongoose
 // =======
-mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }, function (error) {
+mongoose.connect('mongodb://localhost:27017/db', { useUnifiedTopology: true, useNewUrlParser: true }, function (error) {
     if (error) {
         console.log(error)
         console.log('connection error')
@@ -32,7 +32,7 @@ mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true }, fu
 // Setup socket.io
 // =======
 let io = require('socket.io').listen(server);
-io.set('origins', 'https://chat.jack.town:*')
+io.set('origins', 'https://chatwebapp.me:*')
 io.on('connection', function (socket) {
     //console.log('user connected')
     socket.on('fetch', idx => {

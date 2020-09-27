@@ -5,7 +5,7 @@ import Messages from './components/Messages.js';
 import Overlay from './components/Overlay.js';
 import './styles/App.css';
 
-const socket = io('https://35.233.187.4:9000')
+const socket = io('https://chatwebapp.me:9000')
 
 const randId = () => {
   let r = ''
