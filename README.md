@@ -1,6 +1,7 @@
+![screenshot](https://i.imgur.com/aIsQGmr.png)
 ## Chat Web App
 
-Check it out [here!](https://chat.jack.town) Built in a couple days on the MERN stack (Mongo, Express, React, Node). First time doing backend web development. This used to be peer to peer but I had to change it per the project spec… RIP decentralization.
+Check it out [here!](https://35.233.187.4/) Built in a couple days in March 2019 on the MERN stack (Mongo, Express, React, Node). It was my first time doing backend web development. This used to be peer to peer but I had to change it per the project spec.
 
 Features:
 - Scroll to fetch old messages
@@ -14,7 +15,7 @@ Features:
 
 ### Instructions
 
-Install the node dependencies with `npm i` (you may actually need to use pnpm) (mine is aliased) in both `chat_app/` and `chat_app/client`. Then `npm run build` in `chat_app/client` to build the front end. Start the web server with `node server.js` in `chat_app/`. You'll need to change `chat.jack.town` in `server.js` to `localhost` or your own domain. Start the database with `mongod --dbpath ./msgsdb --port 27017`. Finally, set up a reverse proxy from port 80/443 to 9000 and you're good to go!
+Install the node dependencies with `npm i` (you may actually need to use pnpm) (mine is aliased) in both `chat_app/` and `chat_app/client`. Then `npm run build` in `chat_app/client` to build the front end. Start the web server with `node server.js` in `chat_app/`. You'll need to change `35.233.187.4` in `server.js` to `localhost` or your own domain. Start the database with `mongod --dbpath ./msgsdb --port 27017`. Finally, set up a reverse proxy from port 80/443 to 9000 and you're good to go!
 
 ---
 
